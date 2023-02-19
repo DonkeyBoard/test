@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Test H</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>chota - A micro CSS framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/chota">
+  <link rel="stylesheet" href="./doc-styles.css">
 </head>
 
 <body id="top">
   <div class="container">
+    <div class="hero is-full-screen">
       <nav class="tabs is-center">
         <a href="#features">features</a>
         <a href="#start">start</a>
@@ -22,6 +25,7 @@
         <h3>A <strong>micro</strong> (~3kb) CSS framework.</h3>
         <small><em>FWIW, "choṭā" means "small" in Hindi</em></small>
       </div>
+    </div>
 
     <section id="features">
       <h2>Features</h2>
@@ -733,7 +737,22 @@
     <p>Want icons for your project too? Checkout <a href="https://icongr.am" target="_blank">Icongr.am 🚀</a></p>
     <h5>Made by <a href="https://jgog.in" target="_blank">Jenil Gogari</a></h5>
   </footer>
+  <script>
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.body.classList.add("dark");
+      document.querySelector('#theme-switch').innerHTML = "🌙"
+    }
+
+    function switchMode(el) {
+      const bodyClass = document.body.classList;
+      bodyClass.contains("dark")
+        ? ((el.innerHTML = "☀️"), bodyClass.remove("dark"))
+        : ((el.innerHTML = "🌙"), bodyClass.add("dark"));
+    }
+  </script>
 </body>
 
 </html>
-
