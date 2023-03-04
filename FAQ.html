@@ -30,31 +30,28 @@
       </nav>
     </div>
   </header>
-  <div class="container mx-auto max-w-4xl px-4">
+  
+       <div class="section">
+            <h2>
+                FAQ
+            </h2>
 
-    <div class="section mt-10">
-      <br>
-      <br>
-      <h2 id="what-is-userbase">FAQ</h2>
-      <h1>Upload your work as a PDF and get a <span class="highlight">permanent</span> link</h1>
-      <br>
-      <p id="description" class="description mb-8">Instant Archive is the easiest way to publish, share, and preserve your work ... without having to manage a blog or trawl through your documents folder every time. Here's how to get started:</p>
-     
-      <h3 id="user-accounts" class="mt-8">1. Click Upload</h3>
-      <p>Getting your work on the internet with Instant Archive is that simple!</p>
-
-      <h3 id="zero-management-database">2. Enter your Email</h3>
-      <p>So we know where to send any communication about your work.</p>
-
-      <h3 id="e2ee-database">3. Pick your URL</h3>
-      <p>All links are in the form: instantarchive.org/an-example-work. Pick what comes after the slash</p>
-
-      <h3 id="open-source">4. Go Live!</h3>
-      <p>We'll just need to quickly check that your work conforms with our <a href="/">acceptable use policy</a>!</p>
-      
-      <br>
-      <br>
-    </div>
+            <h3 id="faq-1">What data does Userbase end-to-end encrypt?</h3>
+            <p>
+                Items, item ID's, files, and database names stored using the 
+                <a href="/docs/sdk/open-database">openDatabase</a>
+                , 
+                <a href="/docs/sdk/insert-item">insertItem</a>
+                , 
+                <a href="/docs/sdk/update-item">updateItem</a>
+                , 
+                <a href="/docs/sdk/delete-item">deleteItem</a>
+                , 
+                <a href="/docs/sdk/put-transaction">putTransaction</a>
+                , and 
+                <a href="/docs/sdk/upload-file">uploadFile</a>
+                 APIs are end-to-end encrypted. Other user data and metadata, such as usernames, timestamps, write access permissions, and user activity logs, are encrypted on the wire and at rest, but are not end-to-end encrypted.
+            </p>
 
     <hr>
     <footer class="text-center py-4 tracking-tight text-sm">
